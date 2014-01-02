@@ -20,7 +20,7 @@ How do I use this?
 
 Git clone the repository:
 
-        git@github.com:jph98/MavenArchetypeExample.git
+        git@github.com:jph98/mae.git
         
 Install it into your local Maven repository:
 
