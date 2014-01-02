@@ -13,7 +13,9 @@ This was created by generating a standard Maven project (from Eclipse or Intelli
 
     mvn archetype:create-from-project
 
-in the target directory.  This project is the result of the archetype created.
+in the target directory.  
+
+This project is the result of the archetype created in the target/generated-sources/archetype folder
 
 How do I use this?
 ------------------
@@ -28,7 +30,7 @@ Install it into your local Maven repository:
         
 If all goes well you can generate a new project using this archetype with:
 
-        mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.froyo -DarchetypeArtifactId=exampleproject-archetype -DarchetypeVersion=0.0.1-SNAPSHOT -DinteractiveMode=false -DgroupId=com.froyo -DartifactId=myfirstproject -Dpackage=com.froyo
+        mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.froyo -DarchetypeArtifactId=exampleproject-archetype -DarchetypeVersion=1.0 -DinteractiveMode=false -DgroupId=com.froyo -DartifactId=myfirstproject -Dpackage=com.froyo
         
 An explanation of the parameters here:
 
