@@ -1,0 +1,10 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8"?>
+<project version="4">
+  <${package}ponent name="ProjectModuleManager">
+    <modules />
+  </${package}ponent>
+</project>
+

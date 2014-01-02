@@ -1,0 +1,27 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8"?>
+<project version="4">
+  <${package}ponent name="IdProvider" IDEtalkID="0F2750F7A1BB06C0ADB3E4B51461D6E0" />
+  <${package}ponent name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
+    <output url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/out" />
+  </${package}ponent>
+  <${package}ponent name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </${package}ponent>
+</project>
+
