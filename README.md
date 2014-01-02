@@ -43,5 +43,75 @@ An explanation of the parameters here:
 * artifactId - the artifact id YOU want to use (customise as you like)
 * pacakge - the package you want to use (customise as you like)
 
+How do customise this further?
+------------------------------
 
+Download this project and look at the general structure of the project.
 
+A good starting point is the Main.java class in the archetype-resources folder.  It contains a number of Velocity tags that are used replaced by Maven during the project creation process.
+
+        #set( $symbol_pound = '#' )
+        #set( $symbol_dollar = '$' )
+        #set( $symbol_escape = '\' )
+        package ${package};
+        
+Package in this case comes from the parameter passed in when you create a new project.
+
+You might want to try the following from here:
+* Adding more dependencies to the pom.xml to specify a more complete starter project (Mockito, log4j etc...)
+* Adding a standard properties/yaml file in src/main/resources
+* Customise the package structure where the source files are found
+* Add the standard Maven plugins you need for your project
+* Add custom repositories you require
+
+The archetype-metadata.xml provides a list of filtering that occurs during project generation also. e.g.
+
+        <archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="exampleproject"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>.idea</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>.idea/copyright</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>.idea/scopes</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>.idea</directory>
+          <includes>
+            <include>**/*.name</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>exampleproject.iml</include>
+            <include>README.md</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </archetype-descriptor>
