@@ -64,54 +64,12 @@ You might want to try the following from here:
 * Add the standard Maven plugins you need for your project
 * Add custom repositories you require
 
-The archetype-metadata.xml provides a list of filtering that occurs during project generation also. e.g.
+The archetype-metadata.xml provides a list of filtering that occurs during project generation also.  The following extract creates the src/test/java directory.
 
-        <archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="exampleproject"
-    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <fileSets>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
           <directory>src/test/java</directory>
           <includes>
             <include>**/*.java</include>
           </includes>
         </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>.idea</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>.idea/copyright</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>.idea/scopes</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>.idea</directory>
-          <includes>
-            <include>**/*.name</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>exampleproject.iml</include>
-            <include>README.md</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </archetype-descriptor>
+    
