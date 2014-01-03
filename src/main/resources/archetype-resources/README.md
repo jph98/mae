@@ -1,1 +1,2 @@
-Main project
+${artifactId}
+-------------
