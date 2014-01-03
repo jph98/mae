@@ -39,7 +39,8 @@
         <include>**/*.name</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    
+    <fileSet filtered="true" encoding="UTF-8">
       <directory></directory>
       <includes>
         <include>exampleproject.iml</include>
@@ -48,5 +49,6 @@
         <include>.classpath</include>
       </includes>
     </fileSet>
+    
   </fileSets>
 </archetype-descriptor>
