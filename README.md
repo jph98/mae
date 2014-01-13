@@ -73,3 +73,10 @@ The archetype-metadata.xml provides a list of filtering that occurs during proje
           </includes>
         </fileSet>
     
+Creating a new project in Eclipse
+---------------------------------
+
+* Install the archetype in local repository with mvn install
+* Go to Preferences > Maven > Archetypes and Add Local Catalog
+* Select the catalog from file (archetype-catalog.xml)
+* Create new Maven project and select the archetype (remember so select Include snapshot archetypes).
